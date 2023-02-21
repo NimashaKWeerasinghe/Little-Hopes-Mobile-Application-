@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "15014456263",
+    "project_id": "littlehopes",
+    "storage_bucket": "littlehopes.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:15014456263:android:a2ae22d2356762fa1b87e2",
+        "android_client_info": {
+          "package_name": "com.example.littlehopes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "15014456263-f7g68p7e1up53pacme47in79ejld51e8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFGICQ92aeECl3dPbDAxYsyRvGuysApVU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "15014456263-f7g68p7e1up53pacme47in79ejld51e8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "15014456263-7nrb68dh48cadeajs0subq7f88ttu6si.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.littlehopes"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
