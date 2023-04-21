@@ -1,5 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:littlehopes/screens/NearOrphange/near_orphanage_screen.dart';
+import 'package:littlehopes/screens/orphange.dart';
+
 import 'package:littlehopes/screens/home_screen.dart';
 import 'package:littlehopes/screens/signup_screen.dart';
 
@@ -54,8 +57,10 @@ class _SignInScreenState extends State<SignInScreen> {
                           email: _emailTextController.text,
                           password: _passwordTextController.text)
                       .then((value) {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => HomeScreen()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => OrphangeScreen()));
                   }).onError((error, stackTrace) {
                     print("Error ${error.toString()}");
                   });
@@ -78,7 +83,7 @@ class _SignInScreenState extends State<SignInScreen> {
         GestureDetector(
           onTap: () {
             Navigator.push(context,
-                MaterialPageRoute(builder: (context) => SignUpScreen()));
+                MaterialPageRoute(builder: (context) => WelcomeScreen()));
           },
           child: const Text(
             "Sign Up",
