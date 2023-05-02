@@ -91,7 +91,7 @@ class _GiveDonationState extends State<GiveDonation> {
               child: SingleChildScrollView(
                 child: Column(children: [
                   const SizedBox(
-                    height: 50,
+                    height: 20,
                   ),
                   const Text(
                     'Not a Donation, Little bit of Love',
@@ -101,67 +101,143 @@ class _GiveDonationState extends State<GiveDonation> {
                     ),
                     textAlign: TextAlign.center,
                   ),
+                  Image.asset(
+                    "assets/images/donation1.png",
+                    height: 400,
+                    width: 400,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(15),
+                    child: TextField(
+                        controller: dName,
+                        keyboardType: TextInputType.text,
+                        decoration: InputDecoration(
+                          hintStyle: TextStyle(
+                              fontSize: 20.0,
+                              color: Color.fromARGB(255, 15, 12, 12)),
+                          labelText: "Username",
+                          labelStyle:
+                              TextStyle(color: Color.fromARGB(255, 7, 3, 4)),
+                          prefixIcon: Icon(
+                            Icons.person,
+                            color: Color.fromARGB(255, 8, 7, 7),
+                          ),
+                          border: myinputborder(),
+                          enabledBorder: myinputborder(),
+                          focusedBorder: myfocusborder(),
+                        )),
+                  ),
                   const SizedBox(
-                    height: 30,
+                    height: 10,
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextField(
-                      controller: dName,
-                      keyboardType: TextInputType.text,
-                      decoration: const InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: Color.fromARGB(255, 5, 43, 73),
-                                width: 1.5)),
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                                width: 1.5,
-                                color: Color.fromARGB(255, 10, 57, 96))),
-                        labelText: 'Full Name',
-                        labelStyle:
-                            TextStyle(color: Color.fromARGB(255, 25, 26, 26)),
-                        hintText: 'Enter Your Name',
-                      ),
-                    ),
+                        controller: dAge,
+                        keyboardType: TextInputType.text,
+                        decoration: InputDecoration(
+                          hintStyle: TextStyle(
+                              fontSize: 20.0,
+                              color: Color.fromARGB(255, 15, 12, 12)),
+                          labelText: "Age",
+                          labelStyle:
+                              TextStyle(color: Color.fromARGB(255, 7, 3, 4)),
+                          prefixIcon: Icon(
+                            Icons.person,
+                            color: Color.fromARGB(255, 8, 7, 7),
+                          ),
+                          border: myinputborder(),
+                          enabledBorder: myinputborder(),
+                          focusedBorder: myfocusborder(),
+                        )),
                   ),
                   const SizedBox(
-                    height: 30,
+                    height: 10,
+                    width: 300,
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextField(
-                      controller: dAge,
+                      controller: dJob,
                       keyboardType: TextInputType.text,
-                      decoration: const InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: Color.fromARGB(255, 5, 43, 73),
-                                width: 1.5)),
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                                width: 1.5,
-                                color: Color.fromARGB(255, 10, 57, 96))),
-                        labelText: 'Age',
+                      decoration: InputDecoration(
+                        hintStyle: TextStyle(
+                            fontSize: 20.0,
+                            color: Color.fromARGB(255, 15, 12, 12)),
+                        labelText: "Date of Birth",
                         labelStyle:
-                            TextStyle(color: Color.fromARGB(255, 25, 26, 26)),
-                        hintText: 'Enter Your Age',
+                            TextStyle(color: Color.fromARGB(255, 7, 3, 4)),
+                        prefixIcon: Icon(
+                          Icons.calendar_month,
+                          color: Color.fromARGB(255, 8, 7, 7),
+                        ),
+                        border: myinputborder(),
+                        enabledBorder: myinputborder(),
+                        focusedBorder: myfocusborder(),
                       ),
                     ),
                   ),
                   const SizedBox(
-                    height: 30,
+                    height: 10,
+                    width: 300,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextField(
+                        controller: dAmount,
+                        keyboardType: TextInputType.number,
+                        decoration: InputDecoration(
+                          hintStyle: TextStyle(
+                              fontSize: 20.0,
+                              color: Color.fromARGB(255, 15, 12, 12)),
+                          labelText: "Amount of Donation",
+                          labelStyle:
+                              TextStyle(color: Color.fromARGB(255, 7, 3, 4)),
+                          prefixIcon: Icon(
+                            Icons.money,
+                            color: Color.fromARGB(255, 8, 7, 7),
+                          ),
+                          border: myinputborder(),
+                          enabledBorder: myinputborder(),
+                          focusedBorder: myfocusborder(),
+                        )),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                    width: 300,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextField(
+                        controller: dDate,
+                        keyboardType: TextInputType.datetime,
+                        decoration: InputDecoration(
+                          hintStyle: TextStyle(
+                              fontSize: 20.0,
+                              color: Color.fromARGB(255, 15, 12, 12)),
+                          labelText: "Date",
+                          labelStyle:
+                              TextStyle(color: Color.fromARGB(255, 7, 3, 4)),
+                          prefixIcon: Icon(
+                            Icons.calendar_month,
+                            color: Color.fromARGB(255, 8, 7, 7),
+                          ),
+                          border: myinputborder(),
+                          enabledBorder: myinputborder(),
+                          focusedBorder: myfocusborder(),
+                        )),
+                  ),
+                  const SizedBox(
+                    height: 10,
                     width: 300,
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: DropdownButtonFormField(
                       decoration: InputDecoration(
-                          enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(4),
-                        borderSide: BorderSide(
-                            width: 1.5, color: Color.fromARGB(255, 5, 43, 73)),
-                      )),
+                        enabledBorder: myinputborder(),
+                        focusedBorder: myfocusborder(),
+                      ),
                       isExpanded: true,
                       value: dropdownvaluegender,
                       items: genderDrop.map((String items) {
@@ -178,18 +254,16 @@ class _GiveDonationState extends State<GiveDonation> {
                     ),
                   ),
                   const SizedBox(
-                    height: 30,
+                    height: 10,
                     width: 300,
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: DropdownButtonFormField(
                       decoration: InputDecoration(
-                          enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(4),
-                        borderSide: BorderSide(
-                            width: 1.5, color: Color.fromARGB(255, 5, 43, 73)),
-                      )),
+                        enabledBorder: myinputborder(),
+                        focusedBorder: myfocusborder(),
+                      ),
                       isExpanded: true,
                       value: dropdownvaluemarital,
                       items: maritalDrop.map((String items) {
@@ -206,18 +280,15 @@ class _GiveDonationState extends State<GiveDonation> {
                     ),
                   ),
                   const SizedBox(
-                    height: 30,
+                    height: 10,
                     width: 300,
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: DropdownButtonFormField(
                       decoration: InputDecoration(
-                          enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(4),
-                        borderSide: BorderSide(
-                            width: 1.5, color: Color.fromARGB(255, 5, 43, 73)),
-                      )),
+                          enabledBorder: myinputborder(),
+                          focusedBorder: myfocusborder()),
                       isExpanded: true,
                       value: dropdownvalueedu,
                       items: eduDrop.map((String items) {
@@ -234,18 +305,15 @@ class _GiveDonationState extends State<GiveDonation> {
                     ),
                   ),
                   const SizedBox(
-                    height: 30,
+                    height: 10,
                     width: 300,
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: DropdownButtonFormField(
                       decoration: InputDecoration(
-                          enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(4),
-                        borderSide: BorderSide(
-                            width: 1.5, color: Color.fromARGB(255, 5, 43, 73)),
-                      )),
+                          enabledBorder: myinputborder(),
+                          focusedBorder: myfocusborder()),
                       isExpanded: true,
                       value: dropdownvaluerelation,
                       items: relationDrop.map((String items) {
@@ -262,41 +330,15 @@ class _GiveDonationState extends State<GiveDonation> {
                     ),
                   ),
                   const SizedBox(
-                    height: 30,
-                    width: 300,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: TextField(
-                      controller: dJob,
-                      keyboardType: TextInputType.text,
-                      decoration: const InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: Color.fromARGB(255, 5, 43, 73),
-                                width: 1.5)),
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                                width: 1.5,
-                                color: Color.fromARGB(255, 10, 57, 96))),
-                        labelText: 'Occupation',
-                        hintText: 'Enter Occupation',
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 30,
+                    height: 10,
                     width: 300,
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: DropdownButtonFormField(
                       decoration: InputDecoration(
-                          enabledBorder: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(4),
-                        borderSide: BorderSide(
-                            width: 1.5, color: Color.fromARGB(255, 5, 43, 73)),
-                      )),
+                          enabledBorder: myinputborder(),
+                          focusedBorder: myfocusborder()),
                       isExpanded: true,
                       value: dropdownvaluework,
                       items: workDrop.map((String items) {
@@ -313,57 +355,7 @@ class _GiveDonationState extends State<GiveDonation> {
                     ),
                   ),
                   const SizedBox(
-                    height: 30,
-                    width: 300,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: TextField(
-                      controller: dAmount,
-                      keyboardType: TextInputType.number,
-                      decoration: const InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: Color.fromARGB(255, 5, 43, 73),
-                                width: 1.5)),
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                                width: 1.5,
-                                color: Color.fromARGB(255, 10, 57, 96))),
-                        labelText: 'Amount of Donation',
-                        labelStyle:
-                            TextStyle(color: Color.fromARGB(255, 25, 26, 26)),
-                        hintText: 'Enter Amount of Donation ',
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 30,
-                    width: 300,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: TextField(
-                      controller: dDate,
-                      keyboardType: TextInputType.datetime,
-                      decoration: const InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: Color.fromARGB(255, 5, 43, 73),
-                                width: 1.5)),
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                                width: 1.5,
-                                color: Color.fromARGB(255, 10, 57, 96))),
-                        labelText: 'Date',
-                        labelStyle:
-                            TextStyle(color: Color.fromARGB(255, 25, 26, 26)),
-                        hintText: 'Enter Date',
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 30,
+                    height: 10,
                     width: 300,
                   ),
                   MaterialButton(
@@ -419,3 +411,25 @@ class _GiveDonationState extends State<GiveDonation> {
             ));
   }
 }
+
+OutlineInputBorder myinputborder() {
+  //return type is OutlineInputBorder
+  return OutlineInputBorder(
+      //Outline border type for TextFeild
+      borderRadius: BorderRadius.all(Radius.circular(20)),
+      borderSide: BorderSide(
+        color: Color.fromARGB(172, 16, 5, 5),
+        width: 2.5,
+      ));
+}
+
+OutlineInputBorder myfocusborder() {
+  return OutlineInputBorder(
+      borderRadius: BorderRadius.all(Radius.circular(20)),
+      borderSide: BorderSide(
+        color: Color.fromARGB(255, 15, 16, 15),
+        width: 2.5,
+      ));
+}
+
+  //create a function like this so that you can use it wherever you want

@@ -75,6 +75,7 @@ class _ApplyAdoptionState extends State<ApplyAdoption> {
                     padding: const EdgeInsets.all(8.0),
                     child: TextField(
                       controller: fName,
+                      key: Key("fName"),
                       keyboardType: TextInputType.text,
                       decoration: const InputDecoration(
                         enabledBorder: OutlineInputBorder(
@@ -99,6 +100,7 @@ class _ApplyAdoptionState extends State<ApplyAdoption> {
                     padding: const EdgeInsets.all(8.0),
                     child: TextField(
                       controller: fAge,
+                      key: Key("fAge"),
                       keyboardType: TextInputType.text,
                       decoration: const InputDecoration(
                         enabledBorder: OutlineInputBorder(
