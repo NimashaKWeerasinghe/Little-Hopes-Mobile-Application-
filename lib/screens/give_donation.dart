@@ -136,13 +136,13 @@ class _GiveDonationState extends State<GiveDonation> {
                         controller: dAge,
                         keyboardType: TextInputType.text,
                         decoration: InputDecoration(
-                          hintStyle: TextStyle(
+                          hintStyle: const TextStyle(
                               fontSize: 20.0,
                               color: Color.fromARGB(255, 15, 12, 12)),
                           labelText: "Age",
                           labelStyle:
                               TextStyle(color: Color.fromARGB(255, 7, 3, 4)),
-                          prefixIcon: Icon(
+                          prefixIcon: const Icon(
                             Icons.person,
                             color: Color.fromARGB(255, 8, 7, 7),
                           ),
@@ -358,16 +358,23 @@ class _GiveDonationState extends State<GiveDonation> {
                     height: 10,
                     width: 300,
                   ),
-                  MaterialButton(
+                  ElevatedButton(
                     onPressed: () {
                       _savingDonations();
                     },
-                    child: const Text('Donate'),
-                    color: Colors.blue,
-                    textColor: Colors.white,
-                    minWidth: 300,
-                    height: 50,
-                  ),
+                    child: const Text('Give Donation',
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 22, 17, 17),
+                            fontSize: 25)),
+                    style: ElevatedButton.styleFrom(
+                      shape: StadiumBorder(),
+                      minimumSize: Size(100, 40),
+                      padding: EdgeInsets.symmetric(
+                          horizontal: 40.0, vertical: 20.0),
+                      side: BorderSide(
+                          color: Color.fromARGB(255, 32, 27, 26), width: 2),
+                    ),
+                  )
                 ]),
               ),
             ),

@@ -47,352 +47,359 @@ class _ApplyAdoptionState extends State<ApplyAdoption> {
               child: SingleChildScrollView(
                 child: Column(children: [
                   const SizedBox(
-                    height: 50,
+                    height: 10,
                   ),
                   const Text(
-                    'Not a Donation, Little bit of Love',
+                    'Family is Love ',
                     style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.w500,
-                    ),
+                        fontSize: 34,
+                        fontWeight: FontWeight.w800,
+                        color: Color.fromARGB(98, 6, 14, 126)),
                     textAlign: TextAlign.center,
-                  ),
-                  const SizedBox(
-                    height: 30,
                   ),
                   const Text(
                     'Prospective Adoptive Parent - Female Details',
                     style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.w500,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w700,
                     ),
                     textAlign: TextAlign.center,
                   ),
-                  const SizedBox(
-                    height: 30,
+                  Image.asset(
+                    "assets/images/mom.png",
+                    height: 350,
+                    width: 400,
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextField(
-                      controller: fName,
-                      key: Key("fName"),
-                      keyboardType: TextInputType.text,
-                      decoration: const InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: Color.fromARGB(255, 5, 43, 73),
-                                width: 1.5)),
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                                width: 1.5,
-                                color: Color.fromARGB(255, 10, 57, 96))),
-                        labelText: 'Full Name',
-                        labelStyle:
-                            TextStyle(color: Color.fromARGB(255, 25, 26, 26)),
-                        hintText: 'Enter Name',
-                      ),
-                    ),
+                        controller: fName,
+                        key: const Key("fName"),
+                        keyboardType: TextInputType.text,
+                        decoration: InputDecoration(
+                          hintStyle: const TextStyle(
+                              fontSize: 20.0,
+                              color: Color.fromARGB(255, 15, 12, 12)),
+                          labelText: "Full Name",
+                          labelStyle: const TextStyle(
+                              color: Color.fromARGB(255, 7, 3, 4)),
+                          prefixIcon: const Icon(
+                            Icons.person,
+                            color: Color.fromARGB(255, 8, 7, 7),
+                          ),
+                          border: myinputborder(),
+                          enabledBorder: myinputborder(),
+                          focusedBorder: myfocusborder(),
+                        )),
                   ),
                   const SizedBox(
-                    height: 30,
+                    height: 10,
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextField(
-                      controller: fAge,
-                      key: Key("fAge"),
-                      keyboardType: TextInputType.text,
-                      decoration: const InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: Color.fromARGB(255, 5, 43, 73),
-                                width: 1.5)),
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                                width: 1.5,
-                                color: Color.fromARGB(255, 10, 57, 96))),
-                        labelText: 'Age',
-                        labelStyle:
-                            TextStyle(color: Color.fromARGB(255, 25, 26, 26)),
-                        hintText: 'Enter Age',
-                      ),
-                    ),
+                        controller: fAge,
+                        key: const Key("fAge"),
+                        keyboardType: TextInputType.text,
+                        decoration: InputDecoration(
+                          hintStyle: const TextStyle(
+                              fontSize: 20.0,
+                              color: Color.fromARGB(255, 15, 12, 12)),
+                          labelText: "Age",
+                          labelStyle: const TextStyle(
+                              color: Color.fromARGB(255, 7, 3, 4)),
+                          prefixIcon: const Icon(
+                            Icons.calendar_month,
+                            color: Color.fromARGB(255, 8, 7, 7),
+                          ),
+                          border: myinputborder(),
+                          enabledBorder: myinputborder(),
+                          focusedBorder: myfocusborder(),
+                        )),
                   ),
                   const SizedBox(
-                    height: 30,
+                    height: 10,
                     width: 300,
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextField(
-                      controller: fEmail,
-                      keyboardType: TextInputType.text,
-                      decoration: const InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: Color.fromARGB(255, 5, 43, 73),
-                                width: 1.5)),
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                                width: 1.5,
-                                color: Color.fromARGB(255, 10, 57, 96))),
-                        labelText: 'Email',
-                        labelStyle:
-                            TextStyle(color: Color.fromARGB(255, 25, 26, 26)),
-                        hintText: 'Enter Email',
-                      ),
-                    ),
+                        controller: fEmail,
+                        keyboardType: TextInputType.text,
+                        decoration: InputDecoration(
+                          hintStyle: const TextStyle(
+                              fontSize: 20.0,
+                              color: Color.fromARGB(255, 15, 12, 12)),
+                          labelText: "Email",
+                          labelStyle: const TextStyle(
+                              color: Color.fromARGB(255, 7, 3, 4)),
+                          prefixIcon: const Icon(
+                            Icons.email,
+                            color: Color.fromARGB(255, 8, 7, 7),
+                          ),
+                          border: myinputborder(),
+                          enabledBorder: myinputborder(),
+                          focusedBorder: myfocusborder(),
+                        )),
                   ),
                   const SizedBox(
-                    height: 30,
+                    height: 10,
                     width: 300,
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextField(
-                      controller: fPhone,
-                      keyboardType: TextInputType.text,
-                      decoration: const InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: Color.fromARGB(255, 5, 43, 73),
-                                width: 1.5)),
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                                width: 1.5,
-                                color: Color.fromARGB(255, 10, 57, 96))),
-                        labelText: 'Phone Number',
-                        labelStyle:
-                            TextStyle(color: Color.fromARGB(255, 25, 26, 26)),
-                        hintText: 'Enter Phone Number',
-                      ),
-                    ),
+                        controller: fPhone,
+                        keyboardType: TextInputType.text,
+                        decoration: InputDecoration(
+                          hintStyle: const TextStyle(
+                              fontSize: 20.0,
+                              color: Color.fromARGB(255, 15, 12, 12)),
+                          labelText: "Phone Number",
+                          labelStyle: const TextStyle(
+                              color: Color.fromARGB(255, 7, 3, 4)),
+                          prefixIcon: const Icon(
+                            Icons.phone,
+                            color: Color.fromARGB(255, 8, 7, 7),
+                          ),
+                          border: myinputborder(),
+                          enabledBorder: myinputborder(),
+                          focusedBorder: myfocusborder(),
+                        )),
                   ),
                   const SizedBox(
-                    height: 30,
+                    height: 10,
                     width: 300,
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextField(
-                      controller: fJob,
-                      keyboardType: TextInputType.text,
-                      decoration: const InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: Color.fromARGB(255, 5, 43, 73),
-                                width: 1.5)),
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                                width: 1.5,
-                                color: Color.fromARGB(255, 10, 57, 96))),
-                        labelText: 'Occupation',
-                        labelStyle:
-                            TextStyle(color: Color.fromARGB(255, 25, 26, 26)),
-                        hintText: 'Enter Occupation',
-                      ),
-                    ),
+                        controller: fJob,
+                        keyboardType: TextInputType.text,
+                        decoration: InputDecoration(
+                          hintStyle: const TextStyle(
+                              fontSize: 20.0,
+                              color: Color.fromARGB(255, 15, 12, 12)),
+                          labelText: "Occupation",
+                          labelStyle: const TextStyle(
+                              color: Color.fromARGB(255, 7, 3, 4)),
+                          prefixIcon: const Icon(
+                            Icons.person,
+                            color: Color.fromARGB(255, 8, 7, 7),
+                          ),
+                          border: myinputborder(),
+                          enabledBorder: myinputborder(),
+                          focusedBorder: myfocusborder(),
+                        )),
                   ),
                   const SizedBox(
-                    height: 30,
+                    height: 10,
                     width: 300,
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextField(
-                      controller: fIncome,
-                      keyboardType: TextInputType.text,
-                      decoration: const InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: Color.fromARGB(255, 5, 43, 73),
-                                width: 1.5)),
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                                width: 1.5,
-                                color: Color.fromARGB(255, 10, 57, 96))),
-                        labelText: 'Annual Income',
-                        labelStyle:
-                            TextStyle(color: Color.fromARGB(255, 25, 26, 26)),
-                        hintText: 'Enter Annual Income',
-                      ),
-                    ),
+                        controller: fIncome,
+                        keyboardType: TextInputType.text,
+                        decoration: InputDecoration(
+                          hintStyle: const TextStyle(
+                              fontSize: 20.0,
+                              color: Color.fromARGB(255, 15, 12, 12)),
+                          labelText: "Annual Income",
+                          labelStyle: const TextStyle(
+                              color: Color.fromARGB(255, 7, 3, 4)),
+                          prefixIcon: const Icon(
+                            Icons.money,
+                            color: Color.fromARGB(255, 8, 7, 7),
+                          ),
+                          border: myinputborder(),
+                          enabledBorder: myinputborder(),
+                          focusedBorder: myfocusborder(),
+                        )),
                   ),
                   const SizedBox(
-                    height: 30,
+                    height: 10,
                     width: 300,
                   ),
                   const Text(
                     'Prospective Adoptive Parent - Male Details',
                     style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.w500,
+                      fontSize: 20,
+                      fontWeight: FontWeight.w700,
                     ),
                     textAlign: TextAlign.center,
                   ),
+                  Image.asset(
+                    "assets/images/dad.png",
+                    height: 400,
+                    width: 400,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: TextField(
+                        controller: mName,
+                        keyboardType: TextInputType.text,
+                        decoration: InputDecoration(
+                          hintStyle: const TextStyle(
+                              fontSize: 20.0,
+                              color: Color.fromARGB(255, 15, 12, 12)),
+                          labelText: "Full Name",
+                          labelStyle: const TextStyle(
+                              color: Color.fromARGB(255, 7, 3, 4)),
+                          prefixIcon: const Icon(
+                            Icons.person,
+                            color: Color.fromARGB(255, 8, 7, 7),
+                          ),
+                          border: myinputborder(),
+                          enabledBorder: myinputborder(),
+                          focusedBorder: myfocusborder(),
+                        )),
+                  ),
                   const SizedBox(
-                    height: 30,
+                    height: 10,
                     width: 300,
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextField(
-                      controller: mName,
-                      keyboardType: TextInputType.text,
-                      decoration: const InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: Color.fromARGB(255, 5, 43, 73),
-                                width: 1.5)),
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                                width: 1.5,
-                                color: Color.fromARGB(255, 10, 57, 96))),
-                        labelText: 'Full Name',
-                        labelStyle:
-                            TextStyle(color: Color.fromARGB(255, 25, 26, 26)),
-                        hintText: 'Enter Full Name',
-                      ),
-                    ),
+                        controller: mAge,
+                        keyboardType: TextInputType.text,
+                        decoration: InputDecoration(
+                          hintStyle: const TextStyle(
+                              fontSize: 20.0,
+                              color: Color.fromARGB(255, 15, 12, 12)),
+                          labelText: "Age",
+                          labelStyle: const TextStyle(
+                              color: Color.fromARGB(255, 7, 3, 4)),
+                          prefixIcon: const Icon(
+                            Icons.calendar_month,
+                            color: Color.fromARGB(255, 8, 7, 7),
+                          ),
+                          border: myinputborder(),
+                          enabledBorder: myinputborder(),
+                          focusedBorder: myfocusborder(),
+                        )),
                   ),
                   const SizedBox(
-                    height: 30,
+                    height: 10,
                     width: 300,
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextField(
-                      controller: mAge,
-                      keyboardType: TextInputType.text,
-                      decoration: const InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: Color.fromARGB(255, 5, 43, 73),
-                                width: 1.5)),
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                                width: 1.5,
-                                color: Color.fromARGB(255, 10, 57, 96))),
-                        labelText: 'Age',
-                        labelStyle:
-                            TextStyle(color: Color.fromARGB(255, 25, 26, 26)),
-                        hintText: 'Enter Age',
-                      ),
-                    ),
+                        controller: mEmail,
+                        keyboardType: TextInputType.text,
+                        decoration: InputDecoration(
+                          hintStyle: const TextStyle(
+                              fontSize: 20.0,
+                              color: Color.fromARGB(255, 15, 12, 12)),
+                          labelText: "Email",
+                          labelStyle: const TextStyle(
+                              color: Color.fromARGB(255, 7, 3, 4)),
+                          prefixIcon: const Icon(
+                            Icons.email,
+                            color: Color.fromARGB(255, 8, 7, 7),
+                          ),
+                          border: myinputborder(),
+                          enabledBorder: myinputborder(),
+                          focusedBorder: myfocusborder(),
+                        )),
                   ),
                   const SizedBox(
-                    height: 30,
+                    height: 10,
                     width: 300,
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextField(
-                      controller: mEmail,
-                      keyboardType: TextInputType.text,
-                      decoration: const InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: Color.fromARGB(255, 5, 43, 73),
-                                width: 1.5)),
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                                width: 1.5,
-                                color: Color.fromARGB(255, 10, 57, 96))),
-                        labelText: 'Email',
-                        labelStyle:
-                            TextStyle(color: Color.fromARGB(255, 25, 26, 26)),
-                        hintText: 'Enter Email',
-                      ),
-                    ),
+                        controller: mPhone,
+                        keyboardType: TextInputType.text,
+                        decoration: InputDecoration(
+                          hintStyle: const TextStyle(
+                              fontSize: 20.0,
+                              color: Color.fromARGB(255, 15, 12, 12)),
+                          labelText: "Phone Number",
+                          labelStyle: const TextStyle(
+                              color: Color.fromARGB(255, 7, 3, 4)),
+                          prefixIcon: const Icon(
+                            Icons.phone,
+                            color: Color.fromARGB(255, 8, 7, 7),
+                          ),
+                          border: myinputborder(),
+                          enabledBorder: myinputborder(),
+                          focusedBorder: myfocusborder(),
+                        )),
                   ),
                   const SizedBox(
-                    height: 30,
+                    height: 10,
                     width: 300,
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextField(
-                      controller: mPhone,
-                      keyboardType: TextInputType.text,
-                      decoration: const InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: Color.fromARGB(255, 5, 43, 73),
-                                width: 1.5)),
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                                width: 1.5,
-                                color: Color.fromARGB(255, 10, 57, 96))),
-                        labelText: 'Phone Number',
-                        labelStyle:
-                            TextStyle(color: Color.fromARGB(255, 25, 26, 26)),
-                        hintText: 'Enter Phone Number',
-                      ),
-                    ),
+                        controller: mJob,
+                        keyboardType: TextInputType.text,
+                        decoration: InputDecoration(
+                          hintStyle: const TextStyle(
+                              fontSize: 20.0,
+                              color: Color.fromARGB(255, 15, 12, 12)),
+                          labelText: "Occupation",
+                          labelStyle: const TextStyle(
+                              color: Color.fromARGB(255, 7, 3, 4)),
+                          prefixIcon: const Icon(
+                            Icons.person,
+                            color: Color.fromARGB(255, 8, 7, 7),
+                          ),
+                          border: myinputborder(),
+                          enabledBorder: myinputborder(),
+                          focusedBorder: myfocusborder(),
+                        )),
                   ),
                   const SizedBox(
-                    height: 30,
+                    height: 10,
                     width: 300,
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: TextField(
-                      controller: mJob,
-                      keyboardType: TextInputType.text,
-                      decoration: const InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: Color.fromARGB(255, 5, 43, 73),
-                                width: 1.5)),
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                                width: 1.5,
-                                color: Color.fromARGB(255, 10, 57, 96))),
-                        labelText: 'Occupation',
-                        labelStyle:
-                            TextStyle(color: Color.fromARGB(255, 25, 26, 26)),
-                        hintText: 'Enter Occupation',
-                      ),
-                    ),
+                        controller: mIncome,
+                        keyboardType: TextInputType.text,
+                        decoration: InputDecoration(
+                          hintStyle: const TextStyle(
+                              fontSize: 20.0,
+                              color: Color.fromARGB(255, 15, 12, 12)),
+                          labelText: "Annual Income",
+                          labelStyle: const TextStyle(
+                              color: Color.fromARGB(255, 7, 3, 4)),
+                          prefixIcon: const Icon(
+                            Icons.money,
+                            color: Color.fromARGB(255, 8, 7, 7),
+                          ),
+                          border: myinputborder(),
+                          enabledBorder: myinputborder(),
+                          focusedBorder: myfocusborder(),
+                        )),
                   ),
                   const SizedBox(
-                    height: 30,
+                    height: 10,
                     width: 300,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: TextField(
-                      controller: mIncome,
-                      keyboardType: TextInputType.text,
-                      decoration: const InputDecoration(
-                        enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                                color: Color.fromARGB(255, 5, 43, 73),
-                                width: 1.5)),
-                        focusedBorder: OutlineInputBorder(
-                            borderSide: const BorderSide(
-                                width: 1.5,
-                                color: Color.fromARGB(255, 10, 57, 96))),
-                        labelText: 'Annual Income',
-                        labelStyle:
-                            TextStyle(color: Color.fromARGB(255, 25, 26, 26)),
-                        hintText: 'Enter Annual Income',
-                      ),
-                    ),
-                  ),
-                  const SizedBox(
-                    height: 30,
-                    width: 300,
-                  ),
-                  MaterialButton(
+                  ElevatedButton(
                     onPressed: () {
                       _savingAdoptions();
                     },
-                    child: const Text('Apply Adoption'),
-                    color: Colors.blue,
-                    textColor: Colors.white,
-                    minWidth: 300,
-                    height: 50,
+                    child: const Text('Apply Adoption',
+                        style: TextStyle(
+                            color: Color.fromARGB(255, 22, 17, 17),
+                            fontSize: 25)),
+                    style: ElevatedButton.styleFrom(
+                      shape: StadiumBorder(),
+                      minimumSize: Size(100, 40),
+                      padding: EdgeInsets.symmetric(
+                          horizontal: 40.0, vertical: 20.0),
+                      side: BorderSide(
+                          color: Color.fromARGB(255, 32, 27, 26), width: 2),
+                    ),
                   ),
                 ]),
               ),
@@ -431,4 +438,24 @@ class _ApplyAdoptionState extends State<ApplyAdoption> {
     mPhone.clear();
     mIncome.clear();
   }
+}
+
+OutlineInputBorder myinputborder() {
+  //return type is OutlineInputBorder
+  return const OutlineInputBorder(
+      //Outline border type for TextFeild
+      borderRadius: BorderRadius.all(Radius.circular(20)),
+      borderSide: BorderSide(
+        color: Color.fromARGB(172, 16, 5, 5),
+        width: 2.5,
+      ));
+}
+
+OutlineInputBorder myfocusborder() {
+  return const OutlineInputBorder(
+      borderRadius: BorderRadius.all(Radius.circular(20)),
+      borderSide: BorderSide(
+        color: Color.fromARGB(255, 15, 16, 15),
+        width: 2.5,
+      ));
 }

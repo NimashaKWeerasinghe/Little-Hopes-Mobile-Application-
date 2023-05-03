@@ -30,11 +30,12 @@ class _OrphangeScreenState extends State<OrphangeScreen> {
 
   final List<Widget> _pages = [
     // PaypalHomeScreen(),
-    GiveDonation(),
-    NearLocation(),
-
     ApplyAdoption(),
     ChidrenGallery(),
+    GiveDonation(),
+
+    NearLocation(),
+
     //SponsorChild()
   ];
 
