@@ -25,41 +25,47 @@ class _ChidrenGalleryState extends State<ChidrenGallery> {
         hexStringToColor("6a60d1"),
         hexStringToColor("7d7eb5")
       ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
-      child: StreamBuilder<QuerySnapshot>(
-        stream: _usersStream,
-        builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
-          if (snapshot.hasError) {
-            return Text('Something went wrong');
-          }
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Center(
+          child: StreamBuilder<QuerySnapshot>(
+            stream: _usersStream,
+            builder:
+                (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
+              if (snapshot.hasError) {
+                return Text('Something went wrong');
+              }
 
-          if (snapshot.connectionState == ConnectionState.waiting) {
-            return Text("Loading");
-          }
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return Text("Loading");
+              }
 
-          return ListView(
-            children: snapshot.data!.docs.map((DocumentSnapshot document) {
-              Map<String, dynamic> data =
-                  document.data()! as Map<String, dynamic>;
-              return ListTile(
-                title: Text(data['fullName']),
-                subtitle: Text(data['fName']),
-                leading: Image.network(
-                  data['img'],
-                  height: 100,
-                  width: 80,
-                ),
-                trailing: MaterialButton(
-                  onPressed: () {},
-                  child: Text(data['oStatus']),
-                  color: Colors.blue,
-                  textColor: Colors.white,
-                  minWidth: 30,
-                  height: 25,
-                ),
+              return ListView(
+                children: snapshot.data!.docs.map((DocumentSnapshot document) {
+                  Map<String, dynamic> data =
+                      document.data()! as Map<String, dynamic>;
+                  return ListTile(
+                    title: Text(data['fullName']),
+                    subtitle: Text(data['odob']),
+                    leading: Image.network(
+                      data['img'],
+                      height: 100,
+                      width: 80,
+                    ),
+                    trailing: MaterialButton(
+                      onPressed: () {},
+                      child: Text(data['oStatus']),
+                      color: Colors.blue,
+                      textColor: Colors.white,
+                      minWidth: 30,
+                      height: 25,
+                    ),
+                  );
+                }).toList(),
               );
-            }).toList(),
-          );
-        },
+            },
+          ),
+        ),
       ),
     );
   }
